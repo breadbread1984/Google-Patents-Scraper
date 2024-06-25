@@ -88,6 +88,7 @@ git clone https://github.com/wenyalintw/Google-Patents-Scraper.git
 * Install required modules listed in [requirements.txt](https://github.com/wenyalintw/Google-Patents-Scraper/blob/master/requirements.txt)
 
 ```sh
+sudo apt install chromium-chromedriver
 pip install -r /path/to/requirements.txt
 ```
 
