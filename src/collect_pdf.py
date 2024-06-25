@@ -26,7 +26,7 @@ class CollectPdf(QObject):
         except Exception as e:
             self.signal_update.emit(str(e))
             raise
-        self.ua_generator = UserAgent(cache=False, verify_ssl=True)
+        self.ua_generator = UserAgent()
         self.headers['User-Agents'] = self.ua_generator.chrome
 
     def download_pdf(self, link, dst):
