@@ -64,6 +64,7 @@ class CollectPdf(QObject):
             temp = [s.strip() for s in soup.title.text.splitlines()[0].split(' - ')]
             number = temp[0]
             title = temp[1]
+            if len(soup.select('head > meta[name=description]')) == 0: continue
             abstract = soup.select('head > meta[name=description]')[0]['content'].strip()
             file_overview.write(
                 f'<br><div align="center" style="font-size:28px">({index}) <a href="{link}">{number}</a></div>\n'

@@ -68,7 +68,7 @@ class GooglePatentsScraper(QDialog):
         self.collectpdf_thread.start()
 
     def update_progressbar(self, percentage):
-        self.progressBar.setValue(percentage)
+        self.progressBar.setValue(int(percentage))
 
     def update_log(self, message):
         self.logBrowser.append(f'({datetime.today().strftime("%H:%M:%S")}) {message}')
