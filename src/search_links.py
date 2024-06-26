@@ -91,6 +91,6 @@ class SearchLinks:
                     raise ValueError
             except:
                 print('Final page reach!')
-            break
+                break
 
         return self.links, self.titles
